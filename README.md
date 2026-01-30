@@ -57,4 +57,45 @@ Here is the flow of data in my app:
 
 ## ⚙️ Setup & How to Run
 
-Follow these steps to run
+Follow these steps to run the chatbot on your machine:
+
+**Prerequisites:** You need Python 3.11 installed.
+
+1.  **Clone the Repository**
+    ```bash
+    git clone <your-repo-link-here>
+    cd humanli-rag-chatbot
+    ```
+
+2.  **Install Dependencies**
+    I included a `requirements.txt` file.
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Set up API Key**
+    * Get a free API Key from [Google AI Studio](https://aistudio.google.com/).
+    * Create a file named `.env` in the main folder.
+    * Add your key inside it like this:
+        ```
+        GOOGLE_API_KEY=your_paste_key_here
+        ```
+
+4.  **Run the App**
+    ```bash
+    streamlit run app.py
+    ```
+
+---
+
+## 🔮 Limitations & Future Improvements
+
+Since this is a fresher project, there are a few things I'd like to improve later:
+
+* **JavaScript Support:** Currently, the crawler uses `requests`, so it can't read websites that require JavaScript to load (like React apps). I would add Selenium or Playwright later.
+* **Chat History:** Right now, the memory is short-term (session only). I would like to add a database to save chat history permanently.
+* **Multi-URL Support:** Currently, it handles one link. I'd love to make it crawl a whole domain (sub-pages).
+
+---
+
+**Thank you for checking out my project!** I learned a lot about RAG pipelines and Vector DBs while building this. 🚀
